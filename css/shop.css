@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Poppins;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  background: #f3ededec;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: transparent;
+  position: fixed;
+  z-index: 99;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+nav .nav__logo {
+  width: 30%;
+  text-align: center;
+}
+
+nav .nav__logo h1 {
+  font-family: Poppins;
+  font-size: 22px;
+  color: #f4f4f4;
+}
+
+nav .nav__logo h1 span {
+  font-family: "Krinkes Regular PERSONAL USE";
+  font-size: 2em;
+}
+
+nav .nav__links {
+  width: 50%;
+}
+
+nav .nav__links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .nav__links ul li a {
+  color: #f4f4f4;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+}
+
+nav .nav__links ul li a:after {
+  content: "";
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #f4f4f4;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 150ms ease-in-out;
+  transition: -webkit-transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+}
+
+nav .nav__links ul li a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+nav .nav__links ul li .active {
+  color: #ff5304;
+  font-weight: 800;
+  pointer-events: none;
+}
+
+nav .nav__order {
+  width: 20%;
+  text-align: center;
+}
+
+nav .nav__order img {
+  width: 30px;
+}
+
+.nav-scrolled nav {
+  background: #f4f4f4;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.nav-scrolled nav .nav__logo h1 {
+  color: #222;
+}
+
+.nav-scrolled nav .nav__links ul li a {
+  color: #ff5304;
+}
+
+.nav-scrolled nav .nav__links ul li a:after {
+  background: #ff5304;
+}
+
+.nav-scrolled nav .nav__links ul li .active {
+  color: #222;
+}
+/*# sourceMappingURL=shop.css.map */
