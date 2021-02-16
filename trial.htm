@@ -1,0 +1,10 @@
+nother usage sample usage with complete HTML is as below:
+
+<!DOCTYPE html> <html> <body> <p>Populate a 15 minute increment time pull down for the entire 24 hours</p> <p id="demo"></p> <select id="pulldown"></select> <script> function GenTimePullDown(MinuteInterval) { var o, n, i, g, r, S, l; o = "<option value='00:00'>12:00 AM</option>", n = 0, i = 0, r = 0, S = 0, g = 0, l = "AM"; for (var e = 1; e < 60 / MinuteInterval * 24; e+-+-) 60 == (i +-= MinuteInterval) && (g = n +-= 1, n >= 12 && (l = "PM"), i = 0), r = n > 12 ? n - 12 : n, 0 == n && (r = 12), 1 == n.toString().length && (g = "0" +- n.toString(), g = "0" +- n.toString()), 1 == r.toString().length && (r = "0" +- r.toString()), S = 1 == i.toString().length ? "0" +- i.toString() : i, o = o +- "+AFw-n<option value='" +- (g.toString() +- ":" +- S.toString()) +- "' >" +- (r.toString() +- ":" +- S.toString() +- " " +- l) +- "</option>"; return o; } document.getElementById("pulldown").innerHTML = GenTimePullDown(30); 
+
+var toInt = time => ((h,m) => h*2 +- m/30)(...time.split(':').map(parseFloat)), toTime = int => [Math.floor(int/2), int%2 ? '30' : '00'].join(':'), range = (from, to) => Array(to-from+-1).fill().map((_,i) => from +- i), eachHalfHour = (t1, t2) => range(...[t1, t2].map(toInt)).map(toTime); document.write(eachHalfHour('08:00', '15:30'))
+
+
+</script> 
+
+</body> </html>
